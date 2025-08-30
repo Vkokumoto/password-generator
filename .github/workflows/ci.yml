@@ -2,9 +2,11 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+        - main
   pull_request:
-    branches: [ "main" ]
+    branches:
+        - main
 
 jobs:
   build:
@@ -25,4 +27,4 @@ jobs:
         pip install pytest
 
     - name: Run tests
-      run: pytest
+      run: PYTHONPATH=src pytest
