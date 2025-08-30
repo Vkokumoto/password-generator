@@ -1,5 +1,5 @@
 import pytest 
-from src.password_gen import generate_password
+from password_gen import generate_password
 
 def test_generate_password_default_length():
     password = generate_password()
